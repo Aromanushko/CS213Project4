@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <top>
+      <HBox prefHeight="33.0" prefWidth="353.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="   Order ID:  " />
+            <TextField fx:id="txtOrderID" promptText="Telephone Number" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="rdbDeluxe" mnemonicParsing="false" onAction="#enableNewOrder" prefHeight="17.0" prefWidth="167.0" text="Deluxe (5 Toppings)">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pizzaType" />
+               </toggleGroup></RadioButton>
+            <Label />
+            <RadioButton fx:id="rdbHawaiian" mnemonicParsing="false" onAction="#enableNewOrder" prefHeight="17.0" prefWidth="160.0" text="Hawaiian (2 Toppings)" toggleGroup="$pizzaType" />
+            <Label />
+            <RadioButton fx:id="rdbPepperoni" mnemonicParsing="false" onAction="#enableNewOrder" prefHeight="17.0" prefWidth="180.0" text="Pepperoni (1 Topping)" toggleGroup="$pizzaType" />
+            <Label />
+            <Button fx:id="btnNewOrder" disable="true" mnemonicParsing="false" onAction="#newOrder" text="New Pizza" />
+            <Label />
+            <Button fx:id="btnCart" disable="true" mnemonicParsing="false" onAction="#viewCart" text="Cart " />
+            <Label />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <TextArea fx:id="outputArea" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Pizza Main Menu" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Orders:" />
+            <ListView editable="true" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="166.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Complete " />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnStoreOrders" mnemonicParsing="false" onAction="#viewStoreOrders" text="All Orders" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

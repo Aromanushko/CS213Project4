@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CurrentOrderController">
+   <center>
+      <VBox prefHeight="233.0" prefWidth="304.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="lvOrder" prefHeight="233.0" prefWidth="459.0" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="76.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="  Order ID: " />
+            <Label fx:id="lblOrderID" text="Label" />
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="233.0" prefWidth="116.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Remove Selected" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <VBox prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <Label text="  Subtotal Total: " />
+                  <Label text="Label" />
+                  <Label text="  Order Total: Subtotal * " />
+                  <Label text="Tax Rate" />
+                  <Label text=" = " />
+                  <Label text="Label" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="  " />
+                  <Button mnemonicParsing="false" onAction="#placeOrder" text="Place Order" />
+                  <Label text="   " />
+                  <Button mnemonicParsing="false" text="Cancel Order" />
+                  <Label text="  " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

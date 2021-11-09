@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PizzaCustomizationController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="  Order Id: " />
+            <Label fx:id="lblOrderID" text="Label" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="169.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="toppingPane" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="basePizza" fitHeight="258.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/BasePizza.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pepperoni" fitHeight="258.0" fitWidth="298.0" layoutX="61.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/pepperoni.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="extraCheese" fitHeight="258.0" fitWidth="298.0" layoutX="61.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/extracheese.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="bacon" fitHeight="258.0" fitWidth="298.0" layoutX="61.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/bacon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="jalapeno" fitHeight="258.0" fitWidth="298.0" layoutX="61.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/jalapeno.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="onion" fitHeight="258.0" fitWidth="298.0" layoutX="61.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/onion.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="chicken" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/chicken.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="sausage" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/sausage.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="peppers" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/pepper.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="brocolli" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/brocolli.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ricotta" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/ricotta.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pineapple" fitHeight="258.0" fitWidth="298.0" layoutX="80.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Images/pineapple.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="cbSize" onAction="#updateSize" prefWidth="150.0" promptText="Select Size" />
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox fx:id="cbPEP" mnemonicParsing="false" onAction="#updateToppings" text="Pepperoni" />
+            <CheckBox fx:id="cbEXC" mnemonicParsing="false" onAction="#updateToppings" text="ExtraCheese" />
+            <CheckBox fx:id="cbBAC" mnemonicParsing="false" onAction="#updateToppings" text="Bacon" />
+            <CheckBox fx:id="cbJAL" mnemonicParsing="false" onAction="#updateToppings" text="Jalapeno" />
+            <CheckBox fx:id="cbONI" mnemonicParsing="false" onAction="#updateToppings" text="Onion" />
+            <CheckBox fx:id="cbCHC" mnemonicParsing="false" onAction="#updateToppings" text="Chicken" />
+            <CheckBox fx:id="cbSAG" mnemonicParsing="false" onAction="#updateToppings" text="Sausage" />
+            <CheckBox fx:id="cbPPR" mnemonicParsing="false" onAction="#updateToppings" text="Peppers" />
+            <CheckBox fx:id="cbBRO" mnemonicParsing="false" onAction="#updateToppings" text="Broccoli" />
+            <CheckBox fx:id="cbRIC" mnemonicParsing="false" onAction="#updateToppings" text="Ricotta" />
+            <CheckBox fx:id="cbPIN" mnemonicParsing="false" onAction="#updateToppings" text="Pineapple" />
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addToOrder" prefHeight="25.0" prefWidth="111.0" text="Add to Order" />
+                  <Label />
+               </children>
+            </VBox>
+            <Label text="  Subtotal: " />
+            <Label fx:id="subTotal" text="Label" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
